@@ -1,0 +1,34 @@
+@import "src/app/app.component.scss";
+
+$primary-width: 16%;
+
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+
+  .box {
+    width: $primary-width;
+
+    .value-input {
+      width: 85%
+    }
+
+    .list {
+      padding: 0;
+      list-style: none;
+      text-align: left;
+      justify-content: left;
+
+      .item {
+        padding-bottom: 5px;
+
+        &:hover {
+          font-weight: bold;
+          cursor: pointer
+        }
+      }
+    }
+  }
+}

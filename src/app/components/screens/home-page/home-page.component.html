@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="box">
+    <h1>Hello {{value}}</h1>
+    <input class="value-input" (keydown.enter)="onKeydown($event)" [(ngModel)]="value" maxlength="12">
+    <i class="material-icons btn" (click)="addItem()">add_circle_outline</i>
+    <ul class="list">
+      <li class="item" *ngFor="let el of list; let idx = index;" [ngStyle]="{'color' : el.value.length > 5 ? 'red' : 'black'}"  [routerLink]="['/item', el.id.toString()]">{{el.value}}
+        <i class="material-icons btn" (click)="removeItem(idx)">delete_outline</i></li>
+    </ul>
+    <hr>
+    <ul class="list">
+      <li class="item" *ngFor="let remEl of removedItemsList; let idx = index;" [routerLink]="['/item', remEl.id.toString() ]"><del>{{remEl.value}}</del>
+        <i class="material-icons btn" (click)="restoreItem(idx)">restore</i></li>
+      </ul> 
+  </div>
+  <time-box></time-box>
+</div>

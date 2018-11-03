@@ -1,0 +1,13 @@
+@import "src/app/app.component.scss";
+
+$primary-width: 16%;
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+
+  .box {
+    width: $primary-width;
+  }
+}
